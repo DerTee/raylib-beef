@@ -1,7 +1,7 @@
 using raylib_beef.Types;
 namespace raylib_beef.examples.Core
 {
-	class Camera2d : Raylib // FIXME could not adhere to naming convention, i.e. '2dCamera' because class names can't begin with a number
+	class Camera2d : Raylib
 	{
 		public static void Main()
 		{
