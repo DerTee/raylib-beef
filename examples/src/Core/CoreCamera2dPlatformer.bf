@@ -227,9 +227,9 @@ namespace raylib_beef.examples.Core
 		{
 			if (Raylib.IsKeyDown(.KEY_LEFT)) this.position.x -= PlayerHorSpd*delta;
 			if (Raylib.IsKeyDown(.KEY_RIGHT)) this.position.x += PlayerHorSpd*delta;
-			if (Raylib.IsKeyDown(.KEY_SPACE) && this.canJump) 
+			if (Raylib.IsKeyDown(.KEY_SPACE) && this.canJump)
 			{
-				this.speed = -PlayerHorSpd;
+				this.speed = -PlayerJumpSpd;
 				this.canJump = false;
 			}
 
