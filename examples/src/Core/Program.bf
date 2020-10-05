@@ -5,7 +5,7 @@ namespace raylib_beef.examples.Core
 		// utility to start any example
 		public static void Main()
 		{
-			Camera2dPlatformer.Main();
+			Camera3dMode.Main();
 		}
 	}
 }
