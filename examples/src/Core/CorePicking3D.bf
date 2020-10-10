@@ -11,7 +11,7 @@
 
 using raylib_beef.Types;
 
-namespace raylib_beef.examples
+namespace raylib_beef.examples.Core
 {
 	class Picking3D : Raylib
 	{
