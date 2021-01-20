@@ -33,13 +33,13 @@ namespace raylib_beef.examples.Core
 
 			Camera2D camera;
 			camera.target = Vector2(player.x + 20, player.y + 20);
-			camera.offset = Vector2(screenWidth/2, screenHeight/2);
+			camera.offset = Vector2(screenWidth / 2, screenHeight / 2);
 			camera.rotation = 0.0f;
 			camera.zoom = 1.0f;
 
 			SetTargetFPS(60);
 
-			while(!WindowShouldClose())
+			while (!WindowShouldClose())
 			{
 				Update:
 				{
@@ -59,7 +59,7 @@ namespace raylib_beef.examples.Core
 					else if (camera.rotation < -40) camera.rotation = -40;
 
 					// Camera zoom controls
-					camera.zoom += ((float)GetMouseWheelMove()*0.05f);
+					camera.zoom += ((float)GetMouseWheelMove() * 0.05f);
 
 					if (camera.zoom > 3.0f) camera.zoom = 3.0f;
 					else if (camera.zoom < 0.1f) camera.zoom = 0.1f;
@@ -82,14 +82,14 @@ namespace raylib_beef.examples.Core
 
 					BeginMode2D(camera);
 
-						DrawRectangle(-6000, 320, 13000, 8000, .DARKGRAY);
+					DrawRectangle(-6000, 320, 13000, 8000, .DARKGRAY);
 
-						for (int i = 0; i < maxBuildings; i++) DrawRectangleRec(buildings[i], buildColors[i]);
+					for (int i = 0; i < maxBuildings; i++) DrawRectangleRec(buildings[i], buildColors[i]);
 
-						DrawRectangleRec(player, .RED);
+					DrawRectangleRec(player, .RED);
 
-						DrawLine((int32)camera.target.x, -screenHeight*10, (int32)camera.target.x, screenHeight*10, .GREEN);
-						DrawLine(-screenWidth*10, (int32)camera.target.y, screenWidth*10, (int32)camera.target.y, .GREEN);
+					DrawLine((int32)camera.target.x, -screenHeight * 10, (int32)camera.target.x, screenHeight * 10, .GREEN);
+					DrawLine(-screenWidth * 10, (int32)camera.target.y, screenWidth * 10, (int32)camera.target.y, .GREEN);
 
 					EndMode2D();
 
@@ -100,8 +100,8 @@ namespace raylib_beef.examples.Core
 					DrawRectangle(screenWidth - 5, 5, 5, screenHeight - 10, .RED);
 					DrawRectangle(0, screenHeight - 5, screenWidth, 5, .RED);
 
-					DrawRectangleLines( 10, 10, 250, 113, .BLUE);
 					DrawRectangle(10, 10, 250, 113, ColorAlpha(.SKYBLUE, 0.5f));
+					DrawRectangleLines(10, 10, 250, 113, .BLUE);
 
 					DrawText("Free 2d camera controls:", 20, 20, 10, .BLACK);
 					DrawText("- Right/Left to move Offset", 40, 40, 10, .DARKGRAY);
