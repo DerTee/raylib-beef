@@ -58,8 +58,8 @@ namespace raylib_beef.examples.Core
 
 					EndMode3D();
 
-					DrawRectangle( 10, 10, 320, 133, Fade(.SKYBLUE, 0.5f));
 					DrawRectangleLines( 10, 10, 320, 133, .BLUE);
+				DrawRectangle(10, 10, 320, 133, ColorAlpha(.SKYBLUE, 0.5f));
 
 					DrawText("Free camera default controls:", 20, 20, 10, .BLACK);
 					DrawText("- Mouse Wheel to Zoom in-out", 40, 40, 10, .DARKGRAY);

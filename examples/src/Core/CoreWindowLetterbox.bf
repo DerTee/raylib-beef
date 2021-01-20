@@ -88,10 +88,9 @@ namespace raylib_beef.examples.Core
 
 		                for (int i = 0; i < 10; i++) DrawRectangle(0, (int32)((gameScreenHeight/10)*i), gameScreenWidth, gameScreenHeight/10, colors[i]);
 
-		                DrawText("If executed inside a window,\nyou can resize the window,\nand see the screen scaling!", 10, 25, 20, .WHITE);
-		                
-		                DrawText(TextFormat(scope String()..AppendF("Default Mouse: [{} , {}]", (int)mouse.x, (int)mouse.y)), 350, 25, 20, .GREEN);
-		                DrawText(TextFormat(scope String()..AppendF("Virtual Mouse: [{} , {}]", (int)virtualMouse.x, (int)virtualMouse.y)), 350, 55, 20, .YELLOW);
+				DrawText("If executed inside a window,\nyou can resize the window,\nand see the screen scaling!", 10, 25, 20, .WHITE);
+				DrawText(scope String()..AppendF("Default Mouse: [{} , {}]", (int)mouse.x, (int)mouse.y), 350, 25, 20, .GREEN);
+				DrawText(scope String()..AppendF("Virtual Mouse: [{} , {}]", (int)virtualMouse.x, (int)virtualMouse.y), 350, 55, 20, .YELLOW);
 
 		            EndTextureMode();
 
